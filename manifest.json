@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Random Password Generator",
+  "version": "1.0.1",
+  "description": "Random Password Generator for Google Chrome.",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+	"unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://rndpwd.info/"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+	"type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}

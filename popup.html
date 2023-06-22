@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <title>Random Password Generator</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="popup.js"></script>
+<style>
+#ts-popup-container{width:540px;height:540px}
+.ts-hidden{display:none;visibility:hidden}
+</style>
+</head>
+<body>
+  <div id="ts-popup-container">
+	<div class="row">
+	  <form id="myForm">
+		<div class="row">
+			<div class="col s12">Password generator config</div>
+		</div>
+			
+		<div class="row">
+			<div class="input-field col s6">
+			  <i class="material-icons prefix">note_add</i>
+			  <input type="text" id="len" name="len" class="materialize-textarea" value="14" minlength="1" maxlength="2" required>
+			  <label for="len">Length</label>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="input-field col s3">
+			  <input type="checkbox" id="lower" name="lower" class="materialize-textarea" name="lower" value="1" checked="checked">
+			  <label for="lower">Lowercase</label>
+			</div>
+			
+			<div class="input-field col s3">
+			  <input type="checkbox" id="upper" class="materialize-textarea" name="upper" value="1" checked="checked">
+			  <label for="upper">Uppercase</label>
+			</div>
+			
+			<div class="input-field col s3">
+				<input type="checkbox" id="punctuation" name="punctuation" class="materialize-textarea"  value="1" checked="checked">
+				<label for="punctuation">Punctuation</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s3">
+			  <input type="checkbox" id="digit" name="digit" class="materialize-textarea" value="1" checked="checked">
+			  <label for="digit">Digits</label>
+			</div>
+
+			<div class="input-field col s3">
+			  <input type="checkbox" id="special" name="special" class="materialize-textarea" value="1" checked="checked">
+			  <label for="special">Speacial</label>
+			</div>
+
+			<div class="input-field col s3">
+			  <input type="checkbox" id="bracket" name="bracket" class="materialize-textarea" value="1" checked="checked">
+			  <label for="bracket">Bracket</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s9">
+			  <button class="btn waves-effect waves-light" id="requestButton" name="action">
+				  <i class="material-icons right"></i> get new password
+			  </button>
+			</div>
+		</div>
+			
+	  </form>
+	</div>
+
+	<div class="row">
+	  <h1 id="resultH1" class="ts-hidden">Generated Random Password: <span id="resultContainer"></span></h1>
+	</div>
+  </div>
+</body>
+</html>
