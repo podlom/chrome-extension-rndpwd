@@ -1,5 +1,14 @@
-document.addEventListener("DOMContentLoaded", function(e1) {
-  var event1 = e1 || window.event;
+function getCheckboxValue(checkboxId) {
+  var checkbox = document.getElementById(checkboxId);
+  if (checkbox && checkbox.type === "checkbox") {
+    if (checkbox.checked) {
+      return 1;
+    }
+  }
+  return 0;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
   var requestButton = document.getElementById("requestButton");
   var resultContainer = document.getElementById("resultContainer");
 
@@ -8,23 +17,17 @@ document.addEventListener("DOMContentLoaded", function(e1) {
     event2.preventDefault();
 
 	  var lenInput = document.getElementById("len");
-    var lowerInput = document.getElementById("lower");
-    var upperInput = document.getElementById("upper");
-    var digitInput = document.getElementById("digit");
-    var specialInput = document.getElementById("special");
-    var bracketInput = document.getElementById("bracket");
-    var punctuationInput = document.getElementById("punctuation");
 	
     var params = {
       action: "makeRequest",
       url: "https://rndpwd.info",
       len: lenInput.value,
-      lower: lowerInput.checked,
-      upper: upperInput.checked,
-      digit: digitInput.checked,
-      special: specialInput.checked,
-      bracket: bracketInput.checked,
-      punctuation: punctuationInput.checked
+      lower: getCheckboxValue("lower"),
+      upper: getCheckboxValue("upper"),
+      digit: getCheckboxValue("digit"),
+      special: getCheckboxValue("special"),
+      bracket: getCheckboxValue("bracket"),
+      punctuation: getCheckboxValue("punctuation")
     };
 
     chrome.runtime.sendMessage(params, function(response) {
