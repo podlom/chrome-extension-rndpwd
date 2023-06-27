@@ -4,9 +4,7 @@
   "version": "1.0.2",
   "description": "Random Password Generator for Google Chrome.",
   "permissions": [
-    "tabs",
-    "bookmarks",
-	"unlimitedStorage"
+    "unlimitedStorage"
   ],
   "host_permissions": [
     "https://rndpwd.info/"
