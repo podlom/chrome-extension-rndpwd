@@ -7,7 +7,7 @@
     "unlimitedStorage"
   ],
   "host_permissions": [
-    "https://rndpwd.info/"
+    "https://rndpwd.shkodenko.com/"
   ],
   "optional_host_permissions": [
     "*://*/*"

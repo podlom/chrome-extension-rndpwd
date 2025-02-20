@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
     var params = {
       action: "makeRequest",
-      url: "https://rndpwd.info",
+      url: "https://rndpwd.shkodenko.com",
       len: lenInput.value,
       lower: getCheckboxValue("lower"),
       upper: getCheckboxValue("upper"),
