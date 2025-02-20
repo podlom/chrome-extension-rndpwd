@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Random Password Generator",
-  "version": "1.0.2",
-  "description": "Random Password Generator for Google Chrome.",
+  "version": "1.0.3",
+  "description": "The Random Password Generator for Google Chrome.",
   "permissions": [
     "unlimitedStorage"
   ],
