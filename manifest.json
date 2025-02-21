@@ -1,16 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Random Password Generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The Random Password Generator for Google Chrome.",
   "permissions": [
-    "unlimitedStorage"
+    "scripting"
   ],
   "host_permissions": [
     "https://rndpwd.shkodenko.com/"
-  ],
-  "optional_host_permissions": [
-    "*://*/*"
   ],
   "background": {
     "service_worker": "background.js",
